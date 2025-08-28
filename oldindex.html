@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 Drug Matching Game</h1>
+            <p>Test your pharmaceutical knowledge by matching drug information</p>
+        </div>
+        
+        <div id="setup" class="setup-panel">
+            <h2 class="setup-title">Select Categories to Match</h2>
+            
+            <div class="category-selection">
+                <div class="category-group">
+                    <label for="category1">Category 1:</label>
+                    <select id="category1">
+                        <option value="">Select a category...</option>
+                    </select>
+                </div>
+                
+                <div class="category-group">
+                    <label for="category2">Category 2:</label>
+                    <select id="category2">
+                        <option value="">Select a category...</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="drug-sets">
+                <h3>Select Drug Set:</h3>
+                <div class="radio-grid">
+                    <div class="radio-item">
+                        <input type="radio" id="all" name="drugSet" value="all" checked>
+                        <label for="all">All Drugs</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="1-10" name="drugSet" value="1-10">
+                        <label for="1-10">Cardiovascular HTN (1-10)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="11-20" name="drugSet" value="11-20">
+                        <label for="11-20">Cardiovascular Other (11-20)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="21-30" name="drugSet" value="21-30">
+                        <label for="21-30">Diabetes (21-30)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="31-41" name="drugSet" value="31-41">
+                        <label for="31-41">Antibiotics (31-41)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="21-41" name="drugSet" value="21-41">
+                        <label for="21-41">Diabetes+Antibiotics (21-41)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="42-52" name="drugSet" value="42-52">
+                        <label for="42-52">Pain Management (42-52)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="53-63" name="drugSet" value="53-63">
+                        <label for="53-63">Psychiatry Dep/Anx (53-63)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="64-84" name="drugSet" value="64-84">
+                        <label for="64-84">Elderly Care (64-84)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="85-94" name="drugSet" value="85-94">
+                        <label for="85-94">Pulmonary (85-94)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="95-106" name="drugSet" value="95-106">
+                        <label for="95-106">Women's Health (95-106)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="107-124" name="drugSet" value="107-124">
+                        <label for="107-124">Psych/Neuro (107-124)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="start-button" onclick="startGame()">🚀 Start Game</button>
+        </div>
+        
+        <div id="game" class="game-area">
+            <div class="game-controls">
+                <button class="back-button" onclick="backToSetup()">← Back to Setup</button>
+                <div class="status">
+                    <span id="matches">Matches: 0</span> | 
+                    <span id="attempts">Attempts: 0</span>
+                </div>
+            </div>
+            
+            <div id="cards-container" class="cards-container">
+                <div id="column1" class="card-column"></div>
+                <div id="column2" class="card-column"></div>
+            </div>
+            
+            <div id="completion" class="completion-message" style="display: none;">
+                <h2>🎉 Congratulations!</h2>
+                <p>You've matched all the pairs!</p>
+                <p id="final-score"></p>
+                <button class="play-again" onclick="playAgain()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
