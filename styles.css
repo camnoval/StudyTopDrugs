@@ -1,0 +1,319 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .setup-panel {
+            padding: 40px;
+            background: white;
+        }
+        
+        .setup-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #4a5568;
+        }
+        
+        .category-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .category-group {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .category-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+        
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        select:focus {
+            border-color: #4facfe;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+        
+        .drug-sets {
+            margin: 30px 0;
+        }
+        
+        .drug-sets h3 {
+            margin-bottom: 20px;
+            color: #4a5568;
+            font-size: 1.2rem;
+        }
+        
+        .radio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .radio-item:hover {
+            border-color: #4facfe;
+            background: #ebf8ff;
+        }
+        
+        .radio-item input {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+        
+        .radio-item label {
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .start-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+        
+        .start-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+        
+        .game-area {
+            display: none;
+            padding: 40px;
+            background: white;
+        }
+        
+        .game-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .back-button {
+            padding: 10px 20px;
+            background: #6b7280;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #4b5563;
+        }
+        
+        .status {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .card {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 3px solid #e2e8f0;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+            font-size: 16px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-wrap: break-word;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card.selected {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+        
+        .card.error {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            border-color: #dc2626;
+            animation: shake 0.5s ease-in-out;
+        }
+        
+        .card.matched {
+            background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+            color: white;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .completion-message {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+            color: white;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .completion-message h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .play-again {
+            padding: 15px 30px;
+            background: white;
+            color: #40c057;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .play-again:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .setup-panel {
+                padding: 20px;
+            }
+            
+            .category-selection {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .game-controls {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .card {
+                padding: 15px;
+                font-size: 14px;
+                min-height: 70px;
+            }
+        }
