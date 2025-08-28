@@ -1,0 +1,55 @@
+{
+  "total_questions": 10,
+  "total_correct": 3,
+  "session_history": [
+    {
+      "date": "2025-08-28T09:32:15.697739",
+      "mode": "qa_practice",
+      "total": 10,
+      "correct": 3,
+      "accuracy": 30.0
+    }
+  ],
+  "drug_performance": {
+    "31": {
+      "correct": 0,
+      "total": 1
+    },
+    "83": {
+      "correct": 1,
+      "total": 1
+    },
+    "15": {
+      "correct": 0,
+      "total": 1
+    },
+    "38": {
+      "correct": 1,
+      "total": 1
+    },
+    "70": {
+      "correct": 0,
+      "total": 1
+    },
+    "93": {
+      "correct": 0,
+      "total": 1
+    },
+    "67": {
+      "correct": 1,
+      "total": 1
+    },
+    "7": {
+      "correct": 0,
+      "total": 1
+    },
+    "97": {
+      "correct": 0,
+      "total": 1
+    },
+    "30": {
+      "correct": 0,
+      "total": 1
+    }
+  }
+}
