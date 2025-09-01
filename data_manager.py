@@ -1,4 +1,3 @@
-
 # data_manager.py - Handles all data loading and management
 import pandas as pd
 import tkinter as tk
@@ -6,60 +5,79 @@ from tkinter import messagebox
 
 class DataManager:
     """Manages drug data loading and selection"""
-    
-    def __init__(self):
+
+    def __init__(self, file_path=None):
         self.df = None
         self.sections = {}
         self.selected_sections = {}
         self.selected_drugs = {}
-        self.file_path = r"C:\Users\camer\Documents\Coding\drugs.csv"
-    
+        self.file_path = file_path or r"C:\Users\camer\Documents\Coding\drugs.csv"
+
     def load_data(self):
-        """Load and process the CSV data"""
+        """Load and process the CSV data dynamically by section headers"""
         try:
-            df = pd.read_csv(self.file_path)
-            
-            # Filter out section headers
-            self.df = df[~df['Generic Name'].str.startswith('#', na=False)].reset_index(drop=True)
-            
-            # Define drug sections
-            self.sections = {
-                "Cardiovascular HTN (1-10)": self.df.iloc[0:10],
-                "Cardiovascular Other (11-20)": self.df.iloc[10:20],
-                "Diabetes (21-30)": self.df.iloc[20:30],
-                "Antibiotics (31-41)": self.df.iloc[30:41],
-                "Pain Management (42-52)": self.df.iloc[41:52],
-                "Psychiatry Dep/Anx (53-63)": self.df.iloc[52:63],
-                "Elderly Care (64-84)": self.df.iloc[63:84],
-                "Pulmonary (85-94)": self.df.iloc[84:94],
-                "Women's Health (95-106)": self.df.iloc[94:106],
-                "Psych/Neuro (107-124)": self.df.iloc[106:124]
-            }
-            
-            # Initialize selections (all selected by default)
+            # Read CSV, skip commented lines initially
+            with open(self.file_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+
+            section_name = None
+            records = []
+            sections = {}
+
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+
+                if line.startswith("#"):
+                    # New section header
+                    section_name = line[1:].strip()
+                    sections[section_name] = []
+                elif section_name:
+                    # Only add real data rows (skip repeated headers)
+                    if not line.lower().startswith("generic name"):
+                        sections[section_name].append(line)
+
+            # Flatten into a DataFrame with section info
+            all_rows = []
+            for section, rows in sections.items():
+                for row in rows:
+                    all_rows.append((section, row))
+
+            # Convert to DataFrame
+            self.df = pd.DataFrame([r[1].split(",") for r in all_rows], columns=[
+                "Generic Name", "Brand Name(s)", "Drug Class", "Dosage Forms",
+                "Indication", "Side Effects", "Clinical Pearls"
+            ])
+            self.df['Section'] = [r[0] for r in all_rows]
+
+            # Build sections dictionary
+            for section in self.df['Section'].unique():
+                self.sections[section] = self.df[self.df['Section'] == section]
+
+            # Initialize selections
             for section in self.sections:
                 self.selected_sections[section] = tk.BooleanVar(value=True)
-            
-            for idx, row in self.df.iterrows():
+
+            for idx in self.df.index:
                 self.selected_drugs[idx] = tk.BooleanVar(value=True)
-                
+
         except Exception as e:
             messagebox.showerror("Data Loading Error", f"Failed to load drug data: {str(e)}")
-    
+
     def get_selected_data(self):
         """Get currently selected drugs"""
         selected_data = []
-        
+
         for section_name, is_selected in self.selected_sections.items():
             if is_selected.get():
                 section_data = self.sections[section_name]
                 for idx, row in section_data.iterrows():
                     if self.selected_drugs[idx].get():
                         selected_data.append(row)
-        
+
         if not selected_data:
             messagebox.showwarning("No Selection", "Please select at least one drug or section.")
             return pd.DataFrame()
-        
-        return pd.DataFrame(selected_data)
 
+        return pd.DataFrame(selected_data)

@@ -1,0 +1,149 @@
+Generic Name,Brand Name(s),Drug Class,Dosage Forms,Indication,Side Effects,Clinical Pearls
+
+# CARDIOVASCULAR - HYPERTENSION (Top 10)
+Lisinopril,"Prinivil, Zestril",ACE inhibitor,"Tablet, Solution","Hypertension, heart failure, acute MI","Hypotension, hyperkalemia, increased serum creatinine, dry cough, angioedema","ACE inhibitor, monitor BP, kidney function, serum potassium"
+Valsartan,Diovan,Angiotensin II Receptor Blocker (ARB),Tablet,"Hypertension, heart failure, acute MI","Hypotension, hyperkalemia, increased serum creatinine, angioedema","ARB, similar to ACE inhibitors but less dry cough"
+Hydrochlorothiazide,"Microzide, Oretic",Thiazide Diuretic,"Tablet, Capsule","Hypertension, edema","Metabolic effects, electrolyte imbalances","Thiazide diuretic, first-line for hypertension"
+Furosemide,Lasix,Loop Diuretic,"Tablet, Solution, Injection, Subcutaneous","Hypertension, edema","Metabolic effects, electrolyte imbalances","Loop diuretic, used primarily for heart failure"
+Spironolactone,Aldactone,Potassium-sparing diuretic/Mineralocorticoid receptor antagonist,Tablet,"Hypertension, edema, cirrhosis","Metabolic effects, gynecomastia","Potassium-sparing diuretic, aldosterone antagonist"
+Amlodipine,Norvasc,Calcium Channel Blocker (dihydropyridine),"Tablet, Solution, Suspension","Hypertension, angina","Peripheral edema, palpitations","Dihydropyridine calcium channel blocker"
+Verapamil,Calan,Calcium Channel Blocker (non-dihydropyridine),"Tablet, Tablet ER, ER Capsule, IV solution","Hypertension, angina, atrial arrhythmias","Palpitations, constipation","Non-dihydropyridine calcium channel blocker, monitor heart rate"
+Diltiazem,"Cardizem CD/LA, Tiazac",Calcium Channel Blocker (non-dihydropyridine),"Tablet ER, Capsule ER 12hr/ER 24hr, IV solution","Hypertension, angina, atrial arrhythmias","Palpitations, constipation","Non-dihydropyridine calcium channel blocker, monitor heart rate"
+Atenolol,Tenormin,Beta Blocker,Tablet,"Acute MI, angina, heart failure, hypertension","Fatigue, bradycardia, blunted exercise response, sexual dysfunction","Beta blocker, not first-line for HTN, caution in diabetes and respiratory conditions"
+Metoprolol tartrate,Lopressor,Beta Blocker,"Tablet, IV","Acute MI, angina, heart failure, hypertension","Fatigue, bradycardia, blunted exercise response, sexual dysfunction","Beta blocker, twice daily dosing"
+Metoprolol succinate,Toprol XL,Beta Blocker,Tablet,"Acute MI, angina, heart failure, hypertension","Fatigue, bradycardia, blunted exercise response, sexual dysfunction","Beta blocker, once daily dosing, used for heart failure"
+
+# CARDIOVASCULAR - ANTICOAGULATION / LIPIDS / GERD / BONE / THYROID (11-20) 
+Aspirin,Bayer,Antiplatelet,Tablet,"Acute coronary syndrome, secondary CV prevention","Bleeding, GI ulceration","Antiplatelet agent, awareness of bleeding signs, may need to hold before procedures"
+Clopidogrel,Plavix,Antiplatelet,Tablet,"Acute coronary syndrome, secondary CV prevention",Bleeding,"Antiplatelet agent, often used with aspirin (DAPT)"
+Warfarin,"Coumadin, Jantoven",Anticoagulant,Tablet,"Atrial fibrillation, PE, DVT","Bleeding, drug-drug and drug-food interactions","Anticoagulant, requires INR monitoring, many interactions"
+Atorvastatin,Lipitor,Statin (HMG-CoA reductase inhibitor),Tablet,"Hypercholesterolemia, primary and secondary CV prevention","Muscle pain or weakness, liver dysfunction","Statin, first-line for LDL lowering, timing of dose, diet considerations"
+Ezetimibe,Zetia,Absorption inhibitor,Tablet,"Hypercholesterolemia, familial hypercholesterolemia",GI upset,"Absorption inhibitor, adjunct to lower LDL"
+Fenofibrate,Tricor,Fibric acid,"Tablet, Capsule DR","Hypertriglyceridemia, hypercholesterolemia","GI upset, muscle pain","Fibric acid, triglyceride lowering"
+Omeprazole,Prilosec,Proton Pump Inhibitor,Tablet,"GERD, heartburn, peptic ulcer disease, Zollinger-Ellison syndrome","Long-term: electrolyte imbalances, bone fractures, infection risk","PPI, timing of dose important, drug interactions"
+Famotidine,Pepcid,H2RA (histamine 2 receptor blocker),"Tablet, Powder for Suspension","GERD, heartburn, peptic ulcer disease","GI upset, plateau effect","H2RA, timing of dose, less potent than PPIs"
+Alendronate,Fosamax,Bisphosphonate,"Tablet, Effervescent Tablet, Solution","Osteoporosis treatment and prevention, Paget's disease","Esophageal/gastric ulceration, jaw necrosis, atypical fractures","Bisphosphonate, very specific administration instructions"
+Levothyroxine,"Synthroid, Levoxyl",Thyroxine,"Tablet, Capsule",Hypothyroidism,"Hypo/hyperthyroid symptoms, cardiac effects","Synthetic T4, monitor TSH/T4, very specific administration"
+
+# DIABETES (21-30)
+Metformin,"Glucophage, Glucophage XR, Glumetza",Biguanide,"Tablet ER, Solution",Type 2 diabetes,"GI upset (diarrhea/cramping), lactic acidosis (rare)","Biguanide, first-line for T2DM, renal dose adjustment, weight neutral, cheap"
+Glipizide,"Glucotrol, Glucotrol XL",Sulfonylurea,Tablet ER,Type 2 diabetes,"Hypoglycemia, weight gain","Sulfonylurea, must take with food, durability issues, cheap"
+Pioglitazone,Actos,Thiazolidinedione (TZD),Tablet,Type 2 diabetes,"Weight gain, edema, fracture risk","TZD, 6+ weeks for effect, avoid in heart failure or liver dysfunction"
+Sitagliptin,Januvia,DPP-4 (Dipeptidyl Peptidase-4) inhibitor,Tablet,Type 2 diabetes,"Well tolerated, rare: allergic reactions, pancreatitis, URTIs, joint pain","DPP-4 inhibitor, simple dosing, expensive, minimal hypoglycemia"
+Empagliflozin,Jardiance,SGLT-2 (Sodium Glucose Co-Transporter 2) Inhibitor,Tablet,"Type 2 diabetes, CV risk reduction, heart failure, CKD","UTI, yeast infections, hypotension, electrolyte abnormalities, DKA (rare)","SGLT-2 inhibitor, additional CV/renal benefits, expensive"
+Liraglutide,Victoza,GLP-1 Agonists,Solution: Pen Injector,"Type 2 diabetes (age 10+), CV risk reduction","GI upset (N/V/D), pancreatitis contraindication","GLP-1 agonist, injectable, must titrate, CV benefits"
+Semaglutide,Ozempic,GLP-1 Agonists,Injectable solution,"Type 2 diabetes, CV risk reduction","GI upset (N/V/D), pancreatitis contraindication","GLP-1 agonist, weekly injection, must titrate, CV benefits"
+Insulin glargine,"Lantus, Basaglar, Toujeo",Insulin (basal),Injection Solution,Type 1 and 2 diabetes,"Hypoglycemia, injection site reactions","Basal insulin, once daily, consistent timing"
+Insulin aspart,Novolog,Insulin (prandial),"Solution: Pen Injector, Injection Solution",Type 1 and 2 diabetes,"Hypoglycemia, injection site reactions","Rapid-acting insulin, take 5-10 minutes before meals"
+Insulin lispro,Humalog,Insulin (prandial),"Solution: Pen Injector, Injection Solution",Type 1 and 2 diabetes,"Hypoglycemia, injection site reactions","Rapid-acting insulin, take 5-10 minutes before meals"
+
+# ANTIBIOTICS/ANTIFUNGAL (31-41)
+Amoxicillin,Amoxil,Beta-Lactam,"Tablet, Chewable Tab, ER Tablet, Capsule, Suspension, Drop","Ear/nose/throat, skin infections, UTIs","Diarrhea, drug fever, hypersensitivity reactions","Penicillin, incidence of allergy"
+Amoxicillin/clavulanate,Augmentin,Beta-Lactam,"Tablet, Chewable Tab, ER Tablet, Suspension","Ear/nose/throat, skin infections, UTIs","Diarrhea, drug fever, hypersensitivity reactions","Penicillin with beta-lactamase inhibitor, broader spectrum"
+Cephalexin,Keflex,First-Generation Cephalosporin,"Tablet, Capsule, Powder for oral suspension","Ear/nose/throat, skin infections, UTIs","Diarrhea, drug fever","Cephalosporin, cross-reactivity with penicillin allergy"
+Cefdinir,Omnicef,Third-Generation Cephalosporin,"Capsule, Powder for oral suspension","Ear/nose/throat, skin infections, UTIs","Diarrhea, drug fever","Cephalosporin, cross-reactivity with penicillin allergy"
+Azithromycin,"Zithromax, Z-Pak",Macrolide,"Tablet, Powder for Oral Suspension, Microspheres for Suspension","Ear/nose/throat, pneumonia, skin infections, STIs, MAC prophylaxis",Diarrhea,"Macrolide, 'big gun' antibiotic, not usually first-line"
+Ciprofloxacin,Cipro,Fluoroquinolone,"Tablet ER Tablet, Microcapsules for Suspension","Complicated UTI/pyelonephritis, bone/joint infections, complicated intra-abdominal infections","Tendon rupture/tendonitis, CNS effects, photosensitivity","Fluoroquinolone, 'big gun' for complicated infections"
+Doxycycline,Vibramycin,Tetracycline,"Tablet DR Tablet, Capsule, Powder for Oral Suspension","Acne, rosacea, Lyme disease","Photosensitivity, GI upset","Tetracycline, not for children or pregnant patients"
+Clindamycin,Cleocin,Lincosamide,"Capsule, Granules for oral solution","Skin infections, intra-abdominal infections","Diarrhea/colitis, hypersensitivity/rash","Can be dosed up to four times daily"
+Metronidazole,Flagyl,Nitroimidazole,"Tablet, Capsules, ER Tablets, Suspension","Anaerobic infections, C. difficile diarrhea","Headache, nausea, metallic taste","Avoid alcohol, treats bacterial and parasitic infections"
+Sulfamethoxazole/trimethoprim (TMP-SMX),"Bactrim, Septra",Sulfonamide,"Tablet, Suspension","UTIs, acute otitis media, PCP prophylaxis, traveler's diarrhea","Rash, photosensitivity","Drug interaction with warfarin, incidence of allergy"
+Fluconazole,Diflucan,Antifungal,Tablet,"Candidiasis (vaginal, esophageal, oropharyngeal)","Headache, rash","Antifungal, drug interactions (CYP inhibitor)"
+
+# PAIN MANAGEMENT (42-52)
+Acetaminophen,Tylenol,Analgesic/Antipyretic,Tablet,"Fever reduction, minor pain","Skin rash, liver damage","Max daily dose varies by strength, hepatotoxic in overdose"
+Ibuprofen,"Motrin, Advil",NSAIDs,Tablet,"Fever, mild-moderate pain, osteoarthritis, inflammatory diseases","CV and GI risk (boxed warnings), kidney disease","NSAID, take with food, many contraindications"
+Naproxen,"Aleve, Naproxen",NSAIDs,Tablet,"Fever, mild-moderate pain, osteoarthritis, inflammatory diseases","CV and GI risk (boxed warnings), kidney disease","NSAID, take with food, many contraindications"
+Celecoxib,Celebrex,COX-2 Inhibitor,Tablet,"Acute pain, osteoarthritis, rheumatoid arthritis, JIA","CV and GI risk (boxed warnings), kidney disease","COX-2 selective inhibitor"
+Fentanyl,Duragesic,Opioid Analgesic,Transdermal patch,"Chronic moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Transdermal opioid, CII controlled substance, REMS program"
+Hydrocodone/acetaminophen,"Vicodin, Lortab, Norco",Opioid Analgesic,"Tablet, ER Capsule, Solution, Elixir","Moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Combination opioid, CII controlled substance, bowel regimen"
+Oxycodone ER,OxyContin,Opioid Analgesic,"ER Tablet, ER Capsule","Chronic moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Extended-release opioid, CII controlled substance, abuse-deterrent"
+Oxycodone IR,"Oxy IR, Roxicodone",Opioid Analgesic,"IR Tablet, Capsule, Oral Concentrate","Moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Immediate-release opioid, CII controlled substance"
+Oxycodone/acetaminophen,Percocet,Opioid Analgesic,Tablet,"Moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Combination opioid, CII controlled substance, bowel regimen"
+Tramadol,Ultram,Opioid Analgesic,"Tablet, ODT Tablet, ER Tablet, ER Capsule, Suspension","Moderate-severe pain","Addiction, abuse, misuse, respiratory depression, nausea, constipation","Opioid, CIV controlled substance, lower abuse potential"
+
+# PSYCHIATRY - DEPRESSION/ANXIETY (53-63)
+Citalopram,Celexa,SSRI,"Tablet, Solution",Major depressive disorder,"Weight/GI effects, sexual dysfunction, QT prolongation, bleeding risk","SSRI, first-line for depression, boxed warning for suicidality"
+Escitalopram,Lexapro,SSRI,"Tablet, Solution","Major depressive disorder, generalized anxiety disorder","Weight/GI effects, sexual dysfunction, QT prolongation, bleeding risk","SSRI, first-line for depression, boxed warning for suicidality"
+Fluoxetine,Prozac,SSRI,"Tablet, Capsule, DR Capsule, Solution","Major depressive disorder, OCD, bulimia, treatment-resistant depression","Weight/GI effects, sexual dysfunction, drug interactions","SSRI, activating, drug interactions, boxed warning for suicidality"
+Sertraline,Zoloft,SSRI,"Tablet, Oral Concentrate","Major depressive disorder, OCD, panic disorder, PTSD, PMDD, social anxiety","Weight/GI effects, sexual dysfunction","SSRI, first-line for depression, boxed warning for suicidality"
+Duloxetine,Cymbalta,SNRI,Capsule,"Major depressive disorder, fibromyalgia, GAD, diabetic neuropathy, chronic musculoskeletal pain","Loss of appetite, dizziness, insomnia, sexual dysfunction, hypertension, bleeding risk","SNRI, first-line for depression, boxed warning for suicidality"
+Venlafaxine,Effexor,SNRI,"ER Tablet, ER Capsule","Major depressive disorder, GAD, social anxiety, panic disorder","Loss of appetite, dizziness, insomnia, sexual dysfunction, hypertension, bleeding risk","SNRI, first-line for depression, boxed warning for suicidality"
+Bupropion SR,"Wellbutrin SR, Zyban",Norepinephrine/dopamine reuptake inhibitor,Tablet ER,"Major depressive disorder, smoking cessation","GI upset, weight loss, insomnia","Norepinephrine/dopamine reuptake inhibitor, avoid in seizure/eating disorders"
+Bupropion XL,"Wellbutrin XL, Forfivo XL",Norepinephrine/dopamine reuptake inhibitor,Tablet ER,"Major depressive disorder, seasonal affective disorder","GI upset, weight loss, insomnia","Norepinephrine/dopamine reuptake inhibitor, avoid in seizure/eating disorders"
+Amitriptyline,Elavil,TCA,Tablet,"Major depressive disorder (off-label: neuropathy, migraine)","Anticholinergic effects, sedation","TCA, not first-line, time to effect, avoid sudden discontinuation"
+Trazodone,Desyrel,Serotonin modulator,Tablet,"Major depressive disorder (off-label: sleep)","Drowsiness, nausea, blurred vision, hypotension","Serotonin modulator, frequently used off-label for sleep"
+Lorazepam,Ativan,Benzodiazepine,Tablet,"Anxiety (short-term), preprocedural anxiety, status epilepticus","Drowsiness, physical dependence","Benzodiazepine, CIV controlled substance, boxed warning with opioids"
+
+# ELDERLY CARE (64-73)
+Meclizine,"Antivert, Dramamine",Piperazine,"Tablet, Chewable Tablet","Motion sickness, vertigo","Dry mouth, sedation, somnolence, blurred vision, anaphylaxis","Antihistamine, available OTC (Bonine/Dramamine), take 1 hour before travel"
+Metoclopramide,Reglan,Dopamine Receptor Antagonist,"Tablet, Oral Dispersible Tablet, Solution","Chemotherapy-induced N/V, diabetic gastroparesis, GERD","Fluid retention, nausea, headache, neuroleptic malignant syndrome, tardive dyskinesia","Dopamine antagonist, take 30 min before meals, avoid alcohol and MAOIs"
+Ondansetron,Zofran,Serotonin Receptor Antagonist (5-HT3),Tablet,"Chemotherapy-induced N/V, postoperative N/V, radiation-induced N/V","Constipation, diarrhea, liver enzymes, headache, QT prolongation, torsades de pointes","5-HT3 antagonist, may cause constipation"
+Allopurinol,Zyloprim,Xanthine Oxidase Inhibitor,Tablet,"Gout, hyperuricemia, tumor lysis syndrome, calcium stones","Rash, Stevens-Johnson syndrome, myelosuppression, hepatotoxicity, renal failure","Xanthine oxidase inhibitor, report rash immediately, take after meals, maintain hydration"
+Colchicine,Colcrys,Alkaloid,Tablet,"Gout treatment and prophylaxis, familial Mediterranean fever","Diarrhea, nausea, vomiting, myelosuppression","Discontinue if neuromuscular toxicity, avoid grapefruit, many drug interactions"
+Latanoprost,Xalatan,Prostaglandin analog,Tablet,Glaucoma,"Eye irritation, increased brown pigmentation, longer/darker eyelashes, respiratory symptoms","Prostaglandin analog, once daily in evening, remove contacts before use, refrigerate"
+Zolpidem,Ambien,Nonbarbiturate hypnotic,Tablet,Insomnia,"Dizziness, drugged state, headache, depression worsening, suicidal thoughts","Nonbarbiturate hypnotic, CIV controlled substance, take immediately before bedtime, avoid high-fat meals"
+Eszopiclone,Lunesta,Nonbarbiturate hypnotic,Tablet,Insomnia,"Dizziness, drugged state, headache, unpleasant taste, depression worsening","Nonbarbiturate hypnotic, CIV controlled substance, take immediately before bedtime"
+Selegiline,"Eldepryl, Emsam, Zelapar",MAO-B inhibitor,"Tablet, Transdermal","Parkinson's disease, depression (transdermal)","Headache, insomnia, nausea, application site reaction, hallucinations, dyskinesia","MAO-B inhibitor, many drug interactions, ODT dissolves on tongue, transdermal has suicide warning"
+Valacyclovir,Valtrex,Viral DNA Polymerase Inhibitor,Tablet,"Genital herpes simplex, herpes labialis, herpes zoster/shingles, HIV infection, recurrent genital herpes simplex, varicella","Rash, abdominal pain, nausea, headache, fatigue, thrombotic thrombocytopenic purpura, aseptic meningitis, encephalopathy, seizure, hemolytic uremic syndrome","Avoid sex while herpes sores are present, DOES NOT PREVENT SPREAD, do not suddenly discontinue, stay hydrated to prevent precipitation"
+
+# ELDERLY CONT. (74-84)
+Oxybutynin,Ditropan,Antimuscarinic,"Tablet, Patch, Gel, Syrup",Overactive bladder,"Constipation, diarrhea, dry mouth, UTI, local irritation (patch/gel)","Antimuscarinic, may cause drowsiness, avoid alcohol"
+Tolterodine,Detrol LA,Antimuscarinic,Tablet,Overactive bladder,"Abdominal pain, constipation, dry mouth, headache","Antimuscarinic, extended-release formulation"
+Finasteride,"Proscar (BPH), Propecia (hair loss)",5-alpha reductase inhibitor,Tablet,"BPH, male pattern alopecia","Abnormal ejaculation, breast tenderness, reduced libido, breast neoplasm risk","5-alpha reductase inhibitor, Pregnancy Category X, improvement may take 3+ months"
+Tamsulosin,Flomax,Alpha-1 blocker,Capsule,BPH,"Orthostatic hypotension, dizziness, headache, nasal congestion, priapism, syncope","Alpha-1 blocker, take at bedtime, rise slowly from sitting/lying"
+Terazosin,Hytrin,Alpha-1 blocker,Capsule,"BPH, hypertension","Orthostatic hypotension, dizziness, headache, nasal congestion, priapism, syncope","Alpha-1 blocker, take at bedtime, rise slowly from sitting/lying, avoid sudden discontinuation"
+Tadalafil,Cialis,PDE5 inhibitor,Tablet,"BPH, erectile dysfunction, pulmonary hypertension","Flushing, headache, indigestion, myalgia, visual disturbances, CV events, hearing loss","PDE5 inhibitor, avoid with nitrates/alpha-blockers, report erection >4 hours"
+Sildenafil,"Viagra (ED), Revatio (PAH)",PDE5 inhibitor,Tablet,"Erectile dysfunction, pulmonary hypertension","Flushing, headache, indigestion, myalgia, visual disturbances, CV events, hearing loss","PDE5 inhibitor, take prior to sexual activity, avoid with nitrates/alpha-blockers"
+Donepezil,Aricept,Cholinesterase inhibitor,Tablet,"Alzheimer's disease (mild-moderate-severe)","Weight loss, GI upset, dizziness, bradyarrhythmia, torsades de pointes, GI hemorrhage","Cholinesterase inhibitor, take with food recommended, dose adjustment if missed several days"
+Rivastigmine,Exelon,Cholinesterase inhibitor,"Capsule, Patch","Alzheimer's disease, Parkinson's disease dementia","Weight loss, GI upset, dizziness, bradyarrhythmia, torsades de pointes, GI hemorrhage","Cholinesterase inhibitor, available in patch form"
+Memantine,Namenda,NMDA receptor antagonist,"Tablet, ER Capsule","Alzheimer's disease (moderate-severe)","Hypertension, hypotension, syncope, confusion, dizziness, Stevens-Johnson syndrome, hepatitis","NMDA receptor antagonist, twice daily if >5mg/day, can sprinkle on applesauce"
+Cyclobenzaprine,Flexeril,Centrally acting muscle relaxant,"Tablet, ER Capsule",Skeletal muscle spasm,"Palpitations, bad taste, nausea, dry mouth, dizziness, somnolence, hepatitis","Centrally acting muscle relaxant, avoid MAOIs, not for long-term use (2-3 weeks), avoid alcohol"
+
+# PULMONARY (85-94)
+Albuterol,"ProAir HFA, Proventil HFA, Ventolin HFA",Short-Acting Beta-2 agonist (SABA),HFA/propellant-based inhaler (Metered Dose Inhaler),"Asthma, COPD (bronchodilator)","Tremor, tachycardia, nervousness, headache","SABA - rescue inhaler, onset 5-15 min, duration 4-6 hrs"
+Fluticasone,"Flovent HFA, Flovent Diskus",Inhaled Corticosteroids (ICS),"Metered dose inhaler (MDI), Dry powder inhaler (DPI)",Asthma maintenance therapy,"Oral thrush, hoarseness, cough","ICS - rinse mouth after use, not for acute attacks"
+Mometasone,"Asmanex, Twisthaler",Inhaled Corticosteroids (ICS),"Metered dose inhaler (MDI), Dry powder inhaler (DPI)",Asthma maintenance therapy,"Oral thrush, hoarseness, cough","ICS - rinse mouth after use, not for acute attacks"
+Tiotropium,"Spiriva Handihaler, Spiriva Respimat",Long Acting Muscarinic Antagonists (LAMA),"Metered dose inhaler (MDI), Soft Mist Inhaler (SMI), Dry powder inhaler (DPI)",COPD maintenance therapy,"Dry mouth, constipation, urinary retention","LAMA - once daily dosing, avoid in narrow-angle glaucoma"
+Umeclidinium,Incruse Ellipta,Long Acting Muscarinic Antagonists (LAMA),"Metered dose inhaler (MDI), Soft Mist Inhaler (SMI), Dry powder inhaler (DPI)",COPD maintenance therapy,"Dry mouth, constipation, urinary retention","LAMA - once daily dosing, avoid in narrow-angle glaucoma"
+Ipratropium/Albuterol,"Combivent HFA, Combivent Respimat",SAMA + SABA (Short acting muscarinic antagonist + beta 2 agonist),"Soft Mist Inhaler (SMI), Nebulizer solution",COPD exacerbations,Combined anticholinergic and beta-agonist effects,Combination SAMA + SABA for acute COPD symptoms
+Budesonide/Formoterol,Symbicort HFA,ICS + LABA (Inhaled Corticosteroids + Long Acting Beta 2 Agonist),HFA/propellant-based inhaler (Metered Dose Inhaler),Asthma and COPD maintenance,Combined ICS and LABA effects,"ICS + LABA combination, can be used as rescue in asthma"
+Fluticasone/Salmeterol,"Advair Diskus, Advair HFA",ICS + LABA (Inhaled Corticosteroids + Long Acting Beta 2 Agonist),Dry powder inhaler (DPI),Asthma and COPD maintenance,Combined ICS and LABA effects,"ICS + LABA combination, twice daily dosing"
+Fluticasone/Vilanterol,Breo Ellipta,ICS + LABA (Inhaled Corticosteroids + Long Acting Beta 2 Agonist),Dry powder inhaler (DPI),Asthma and COPD maintenance,Combined ICS and LABA effects,"ICS + LABA combination, once daily dosing"
+Montelukast,Singulair,Leukotriene Receptor Antagonists,"Oral tablets, chewable tablets, oral granules","Asthma maintenance, allergic rhinitis","Mood changes, depression, suicidal thoughts",Leukotriene receptor antagonist; black box warning for neuropsychiatric effects
+
+# WOMEN'S HEALTH/CONTRACEPTION/HRT (95-106)
+Drospirenone/Ethinyl Estradiol,Yaz,Contraceptive,Oral,"Contraception, PMDD, acne","Thromboembolism, hypertension, mood changes",Contains drospirenone (anti-mineralocorticoid effects)
+Etonogestrel/Ethinyl Estradiol,NuvaRing,Contraceptive,Ring,Contraception,"Vaginal irritation, thromboembolism, mood changes","Vaginal ring - insert for 3 weeks, remove for 1 week"
+Levonorgestrel,Plan B One-Step,Contraceptive,Oral,Emergency contraception,"Nausea, fatigue, menstrual changes","Most effective within 72 hours, can use up to 120 hours"
+Medroxyprogesterone,Depo-Provera,Contraceptive,Injection,"Contraception, endometrial cancer","Weight gain, bone density loss, irregular bleeding","Injectable every 3 months, may cause delayed return to fertility"
+Norelgestromin/Ethinyl Estradiol,Xulane,Contraceptive,Transdermal patch,Contraception,"Skin irritation, thromboembolism, mood changes","Transdermal patch - apply weekly for 3 weeks, patch-free week"
+Norgestimate/Ethinyl Estradiol,Ortho Tri-Cyclen,Contraceptive,Oral,"Contraception, acne","Thromboembolism, hypertension, mood changes",Triphasic oral contraceptive
+Norethindrone,Micronor,Contraceptive,Oral,Contraception,"Irregular bleeding, mood changes, weight gain","Progestin-only pill (mini-pill) - safe for breastfeeding"
+Conjugated Estrogens,Premarin,Hormone Replacement Therapy (HRT),"Oral tablet, vaginal cream","Menopausal symptoms, osteoporosis prevention","Thromboembolism, breast cancer risk, gallbladder disease","Hormone replacement therapy - use lowest effective dose"
+Conjugated Estrogens/Medroxyprogesterone,"Prempro, Premphase",Hormone Replacement Therapy (HRT),Oral tablet,Menopausal symptoms,Increased cardiovascular and cancer risks,"Combined HRT - black box warnings for multiple risks"
+Estradiol,"Estrace, Estrogel, Climara",Hormone Replacement Therapy (HRT),Oral tablet,"Menopausal symptoms, osteoporosis prevention","Thromboembolism, breast cancer risk",Available in multiple formulations (oral; gel; patch)
+Progesterone,Prometrium,Hormone Replacement Therapy (HRT),"Oral tablet, vaginal gel, IM injection","Menopausal HRT, amenorrhea","Drowsiness, dizziness, breast tenderness","Bioidentical progesterone, take at bedtime"
+Testosterone,"Androderm, AndroGel, Axiron",Hormone Replacement Therapy (HRT),Transdermal,Hypogonadism in men,"Polycythemia, sleep apnea, prostate effects","Monitor hematocrit, PSA, and lipids regularly"
+
+# PSYCHIATRY - ANTIPSYCHOTICS (107-114)
+Chlorpromazine,Thorazine,First generation "typical" antipsychotic,"Oral, injectable","Schizophrenia, bipolar mania, behavioral disorders","Sedation, EPS, anticholinergic effects, orthostasis, weight gain, prolactin elevation","First-generation antipsychotic, high sedation and anticholinergic effects"
+Haloperidol,Haldol,First generation "typical" antipsychotic,"Oral, injectable","Schizophrenia, behavioral disorders, Tourette's","EPS, hyperprolactinemia","First-generation antipsychotic, high EPS risk, oral and injectable"
+Aripiprazole,Abilify,Second generation "atypical" antipsychotic,"Tablet, ODT, Solution","Bipolar disorder, autism irritability, treatment-resistant MDD, schizophrenia, Tourette's","Lower metabolic risk","Second-generation antipsychotic, mixed agonist/antagonist activity, use in MDD"
+Lurasidone,Latuda,Second generation "atypical" antipsychotic,Tablet,"Bipolar depression, schizophrenia",Sedation,"Second-generation antipsychotic, lower metabolic risk, must take with >350 calorie meal"
+Olanzapine,Zyprexa,Second generation "atypical" antipsychotic,Tablet,"Bipolar disorder, treatment-resistant MDD, schizophrenia, acute agitation","Weight gain, metabolic effects","Second-generation antipsychotic, highest weight gain risk among SGAs"
+Quetiapine,Seroquel,Second generation "atypical" antipsychotic,Tablet,"Bipolar disorder, schizophrenia, MDD adjunct","Metabolic effects, sedation","Second-generation antipsychotic, off-label use for sleep"
+Risperidone,Risperdal,Second generation "atypical" antipsychotic,Tablet,"Bipolar mania, schizophrenia, autism irritability","Hyperprolactinemia, metabolic effects","Second-generation antipsychotic, highest prolactin risk among SGAs"
+Clozapine,Clozaril,Second generation "atypical" antipsychotic,Tablet,"Treatment-resistant schizophrenia, suicidal behavior in schizophrenia","Sedation, anticholinergic effects, weight gain, severe neutropenia","Most effective antipsychotic but most severe side effects, requires ANC monitoring"
+
+# NEUROLOGY (115-124)
+Oxcarbazepine,Trileptal,Anticonvulsant,"Tablet ER, Suspension",Partial seizures,"Nausea, dizziness, drowsiness, hyponatremia, hypersensitivity reactions","CYP3A4 inducer, drug interactions"
+Phenobarbital,Luminal,Anticonvulsant,Tablet,"Seizures, status epilepticus, sedation","CNS depression, respiratory depression, CV effects","Strong CYP3A4 inducer, controlled substance, therapeutic drug monitoring"
+Phenytoin,Dilantin,Anticonvulsant,"Chewable Tablet, Capsule, Suspension","Seizures, status epilepticus","CNS depression, blood dyscrasias, CV effects, hepatotoxicity","Strong CYP3A4 inducer, therapeutic drug monitoring"
+Topiramate,Topamax,Anticonvulsant,"Tablet, Capsule ER, ER Sprinkle","Seizures, migraine prophylaxis","Abdominal pain, low appetite, dizziness, kidney stones, cognitive dysfunction, weight loss","FDA-approved with phentermine for weight loss"
+Carbamazepine,Tegretol,Anticonvulsant/Mood Stabilizer,Tablet,"Seizures, bipolar disorder, neuropathic pain","Nausea, dizziness, blood dyscrasias, hyponatremia, hepatotoxicity","Strong CYP3A4 inducer, therapeutic drug monitoring, genetic testing"
+Divalproex,Depakote,Anticonvulsant/Mood Stabilizer,"ER/DR Tablet, DR Capsule Sprinkles","Bipolar disorder, seizures, migraine prophylaxis","Nausea, weight gain, somnolence, hepatotoxicity, pancreatitis, thrombocytopenia","Multiple dosage forms, therapeutic drug monitoring, teratogenic"
+Lamotrigine,Lamictal,Anticonvulsant/Mood Stabilizer,"Tablet, Chewable, ODT, ER","Bipolar disorder, seizures","Dizziness, somnolence, gait issues, serious skin rashes","Must be titrated very slowly over weeks, drug interaction with valproic acid"
+Lithium,Lithobid,Anticonvulsant/Mood Stabilizer,"Tablet, Capsule, Solution","Bipolar disorder (mania, mixed episodes, maintenance)","Cardiac effects, CNS effects, N/V/D, hypothyroidism, renal effects, tremor, weight gain","Narrow therapeutic index, therapeutic drug monitoring essential"
+Gabapentin,Neurontin,Anticonvulsant/Neuropathic Pain Agent,"Tablet, ER Tablet, Capsule, Solution, Suspension","Postherpetic neuralgia, seizures","Dizziness, drowsiness, fatigue, gait issues, CNS/respiratory depression","Often used off-label for diabetic neuropathy, renal dosing, controlled substance in some states"
+Pregabalin,Lyrica,Anticonvulsant/Neuropathic Pain Agent,Capsule,"Postherpetic neuralgia, diabetic neuropathy, spinal cord injury neuropathy, fibromyalgia, seizures","Dizziness, drowsiness, visual disturbances, dry mouth, edema, weight gain","Renal dosing, controlled substance"
