@@ -644,52 +644,47 @@ function parseDrugSections() {
 function parseDrugSectionsFromData(csvData) {
     const sections = [];
     let currentSection = null;
-    let drugIndex = 0; // This tracks the index in the filtered drugData array
+    let drugIndex = 0;
     
     csvData.forEach((row, index) => {
-        // Skip header row
-        if (index === 0) return;
-        
         const genericName = row['Generic Name'];
         
-        // Check if this is a comment line (starts with #)
-        if (genericName && genericName.startsWith('#')) {
+        // Check if this is a section header (starts with #)
+        if (genericName && genericName.trim().startsWith('#')) {
             // Save previous section if it exists
             if (currentSection) {
                 sections.push(currentSection);
             }
             
             // Create new section
-            const sectionTitle = genericName.replace('#', '').trim();
+            const sectionTitle = genericName.replace(/^#+\s*/, '').trim();
             currentSection = {
                 name: sectionTitle,
-                startIndex: drugIndex, // Start from current drug index
-                endIndex: drugIndex,   // Will be updated as we add drugs
+                startIndex: drugIndex,
+                endIndex: drugIndex,
                 drugs: []
             };
-        } else if (genericName && genericName.trim() !== '' && !genericName.startsWith('#')) {
+        } else if (genericName && genericName.trim() !== '') {
             // This is a drug row
-            if (currentSection) {
-                // Add to current section
-                currentSection.drugs.push({
-                    ...row,
-                    globalIndex: drugIndex
-                });
-                currentSection.endIndex = drugIndex + 1; // Update end index
-            } else {
-                // No current section - create a default one for orphaned drugs
+            if (!currentSection) {
+                // Create a default section if we encounter drugs before any section header
                 currentSection = {
-                    name: 'Other Medications',
+                    name: 'Medications',
                     startIndex: drugIndex,
-                    endIndex: drugIndex + 1,
-                    drugs: [{
-                        ...row,
-                        globalIndex: drugIndex
-                    }]
+                    endIndex: drugIndex,
+                    drugs: []
                 };
             }
-            drugIndex++; // Only increment for actual drug rows
+            
+            // Add to current section
+            currentSection.drugs.push({
+                ...row,
+                globalIndex: drugIndex
+            });
+            currentSection.endIndex = drugIndex + 1;
+            drugIndex++;
         }
+        // Skip empty rows or rows that are just section headers
     });
     
     // Don't forget the last section
