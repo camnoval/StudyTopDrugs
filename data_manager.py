@@ -11,7 +11,7 @@ class DataManager:
         self.sections = {}
         self.selected_sections = {}
         self.selected_drugs = {}
-        self.file_path = file_path or r"C:\Users\camer\Documents\Coding\drugs.csv"
+        self.file_path = file_path or "drugs.csv"
 
     def load_data(self):
         """Load and process the CSV data dynamically by section headers"""

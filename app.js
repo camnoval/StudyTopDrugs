@@ -587,44 +587,130 @@ function updateProgressTracker() {
     container.innerHTML = content;
 }
 
-// DRUG SELECTION FUNCTIONS
+// Updated loadCSVData function
+async function loadCSVData() {
+    try {
+        const response = await fetch('drugs.csv');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const csvText = await response.text();
+        
+        Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+            dynamicTyping: false,
+            transformHeader: function(header) {
+                return header.trim();
+            },
+            complete: function(results) {
+                // Keep ALL rows including comments for section parsing
+                const allRows = results.data;
+                
+                // Create filtered drugData for actual drugs (excluding comments)
+                drugData = results.data.filter(row => {
+                    const genericName = row['Generic Name'];
+                    return genericName && !genericName.trim().startsWith('#');
+                });
+                
+                // Store all rows globally for section parsing
+                window.allCsvData = allRows;
+                
+                // Initialize selected drugs (all selected by default)
+                drugData.forEach((drug, index) => {
+                    selectedDrugs[index] = true;
+                });
+                
+                console.log(`Loaded ${drugData.length} drugs from CSV`);
+            }
+        });
+    } catch (error) {
+        console.error('Error loading CSV:', error);
+        document.getElementById('loading-screen').innerHTML = `
+            <div class="loading">
+                <h2 style="color: #e53e3e;">Error Loading Data</h2>
+                <p>Could not load drugs.csv file: ${error.message}</p>
+                <p>Please make sure the drugs.csv file is in the same directory.</p>
+            </div>
+        `;
+    }
+}
+
+// Updated parseDrugSections to use the complete CSV data
+function parseDrugSections() {
+    return parseDrugSectionsFromData(window.allCsvData || []);
+}
+
+function parseDrugSectionsFromData(csvData) {
+    const sections = [];
+    let currentSection = null;
+    let drugIndex = 0;
+    
+    csvData.forEach((row, index) => {
+        // Skip header row
+        if (index === 0) return;
+        
+        const genericName = row['Generic Name'];
+        
+        // Check if this is a comment line (starts with #)
+        if (genericName && genericName.startsWith('#')) {
+            // Save previous section if it exists
+            if (currentSection) {
+                sections.push(currentSection);
+            }
+            
+            // Create new section
+            const sectionTitle = genericName.replace('#', '').trim();
+            currentSection = {
+                name: sectionTitle,
+                startIndex: drugIndex,
+                endIndex: drugIndex,
+                drugs: []
+            };
+        } else if (genericName && genericName.trim() !== '' && currentSection) {
+            // This is a drug row, add to current section
+            currentSection.drugs.push({
+                ...row,
+                globalIndex: drugIndex
+            });
+            currentSection.endIndex = drugIndex + 1;
+            drugIndex++;
+        }
+    });
+    
+    // Don't forget the last section
+    if (currentSection) {
+        sections.push(currentSection);
+    }
+    
+    return sections;
+}
+
 function createDrugSelection() {
     const container = document.getElementById('drug-selection-content');
     
-    const sections = {
-        "Cardiovascular HTN (1-10)": [0, 10],
-        "Cardiovascular Other (11-20)": [10, 20],
-        "Diabetes (21-30)": [20, 30],
-        "Antibiotics (31-41)": [30, 41],
-        "Pain Management (42-52)": [41, 52],
-        "Psychiatry Dep/Anx (53-63)": [52, 63],
-        "Elderly Care (64-84)": [63, 84],
-        "Pulmonary (85-94)": [84, 94],
-        "Women's Health (95-106)": [94, 106],
-        "Psych/Neuro (107-124)": [106, 124]
-    };
+    // Parse sections from CSV data
+    const sections = parseDrugSections();
     
     let content = '';
     
-    Object.entries(sections).forEach(([sectionName, [start, end]]) => {
-        const sectionDrugs = drugData.slice(start, Math.min(end, drugData.length));
-        if (sectionDrugs.length === 0) return;
+    sections.forEach((section, sectionIndex) => {
+        if (section.drugs.length === 0) return;
         
         content += `
             <div class="drug-section">
                 <div class="section-header">
-                    <input type="checkbox" id="section-${start}" onchange="toggleSection(${start}, ${Math.min(end, drugData.length)})" checked>
-                    <label for="section-${start}">${sectionName} (${sectionDrugs.length} drugs)</label>
+                    <input type="checkbox" id="section-${section.startIndex}" onchange="toggleSection(${section.startIndex}, ${section.endIndex})" checked>
+                    <label for="section-${section.startIndex}">${section.name} (${section.drugs.length} drugs)</label>
                 </div>
         `;
         
-        sectionDrugs.forEach((drug, index) => {
-            const globalIndex = start + index;
+        section.drugs.forEach((drug) => {
             const drugText = `${drug['Generic Name']} (${drug['Brand Name(s)'] || 'N/A'})`;
             content += `
                 <div class="drug-checkbox">
-                    <input type="checkbox" id="drug-${globalIndex}" ${selectedDrugs[globalIndex] ? 'checked' : ''} onchange="updateDrugSelection(${globalIndex})">
-                    <label for="drug-${globalIndex}">${drugText.substring(0, 60)}${drugText.length > 60 ? '...' : ''}</label>
+                    <input type="checkbox" id="drug-${drug.globalIndex}" ${selectedDrugs[drug.globalIndex] ? 'checked' : ''} onchange="updateDrugSelection(${drug.globalIndex})">
+                    <label for="drug-${drug.globalIndex}">${drugText.substring(0, 60)}${drugText.length > 60 ? '...' : ''}</label>
                 </div>
             `;
         });
@@ -640,7 +726,7 @@ function toggleSection(start, end) {
     const sectionCheckbox = document.getElementById(`section-${start}`);
     const isChecked = sectionCheckbox.checked;
     
-    for (let i = start; i < end && i < drugData.length; i++) {
+    for (let i = start; i < end && i < getTotalDrugCount(); i++) {
         selectedDrugs[i] = isChecked;
         const drugCheckbox = document.getElementById(`drug-${i}`);
         if (drugCheckbox) {
@@ -656,17 +742,14 @@ function updateDrugSelection(index) {
 }
 
 function updateSectionCheckboxes() {
-    const sections = [
-        [0, 10], [10, 20], [20, 30], [30, 41], [41, 52],
-        [52, 63], [63, 84], [84, 94], [94, 106], [106, 124]
-    ];
+    const sections = parseDrugSections();
     
-    sections.forEach(([start, end]) => {
-        const sectionCheckbox = document.getElementById(`section-${start}`);
+    sections.forEach((section) => {
+        const sectionCheckbox = document.getElementById(`section-${section.startIndex}`);
         if (!sectionCheckbox) return;
         
         let allChecked = true;
-        for (let i = start; i < end && i < drugData.length; i++) {
+        for (let i = section.startIndex; i < section.endIndex && i < getTotalDrugCount(); i++) {
             if (!selectedDrugs[i]) {
                 allChecked = false;
                 break;
@@ -677,16 +760,18 @@ function updateSectionCheckboxes() {
 }
 
 function selectAllDrugs() {
-    drugData.forEach((_, index) => {
-        selectedDrugs[index] = true;
-    });
+    const totalDrugs = getTotalDrugCount();
+    for (let i = 0; i < totalDrugs; i++) {
+        selectedDrugs[i] = true;
+    }
     createDrugSelection();
 }
 
 function deselectAllDrugs() {
-    drugData.forEach((_, index) => {
-        selectedDrugs[index] = false;
-    });
+    const totalDrugs = getTotalDrugCount();
+    for (let i = 0; i < totalDrugs; i++) {
+        selectedDrugs[i] = false;
+    }
     createDrugSelection();
 }
 
@@ -698,6 +783,18 @@ function saveDrugSelection() {
     const selectedCount = Object.values(selectedDrugs).filter(Boolean).length;
     alert(`Selection saved! ${selectedCount} drugs selected.`);
     showScreen('main-menu');
+}
+
+// Helper function to get total drug count (excluding comment rows)
+function getTotalDrugCount() {
+    return drugData.length;
+}
+
+// Helper function to get section information for debugging
+function getSectionInfo() {
+    const sections = parseDrugSections();
+    console.log('Parsed sections:', sections);
+    return sections;
 }
 
 // Initialize app when page loads
