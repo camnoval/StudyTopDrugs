@@ -586,7 +586,55 @@ function updateProgressTracker() {
     
     container.innerHTML = content;
 }
-// DRUG SELECTION FUNCTIONS
+
+// Updated loadCSVData function
+async function loadCSVData() {
+    try {
+        const response = await fetch('drugs.csv');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const csvText = await response.text();
+        
+        Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+            dynamicTyping: false,
+            transformHeader: function(header) {
+                return header.trim();
+            },
+            complete: function(results) {
+                // Keep ALL rows including comments for section parsing
+                const allRows = results.data;
+                
+                // Create filtered drugData for actual drugs (excluding comments)
+                drugData = results.data.filter(row => {
+                    const genericName = row['Generic Name'];
+                    return genericName && !genericName.trim().startsWith('#');
+                });
+                
+                // Store all rows globally for section parsing
+                window.allCsvData = allRows;
+                
+                // Initialize selected drugs (all selected by default)
+                drugData.forEach((drug, index) => {
+                    selectedDrugs[index] = true;
+                });
+                
+                console.log(`Loaded ${drugData.length} drugs from CSV`);
+            }
+        });
+    } catch (error) {
+        console.error('Error loading CSV:', error);
+        document.getElementById('loading-screen').innerHTML = `
+            <div class="loading">
+                <h2 style="color: #e53e3e;">Error Loading Data</h2>
+                <p>Could not load drugs.csv file: ${error.message}</p>
+                <p>Please make sure the drugs.csv file is in the same directory.</p>
+            </div>
+        `;
+    }
+}
 
 // Updated parseDrugSections to use the complete CSV data
 function parseDrugSections() {
