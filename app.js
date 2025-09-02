@@ -644,7 +644,7 @@ function parseDrugSections() {
 function parseDrugSectionsFromData(csvData) {
     const sections = [];
     let currentSection = null;
-    let drugIndex = 0;
+    let drugIndex = 0; // This tracks the index in the filtered drugData array
     
     csvData.forEach((row, index) => {
         // Skip header row
@@ -663,18 +663,32 @@ function parseDrugSectionsFromData(csvData) {
             const sectionTitle = genericName.replace('#', '').trim();
             currentSection = {
                 name: sectionTitle,
-                startIndex: drugIndex,
-                endIndex: drugIndex,
+                startIndex: drugIndex, // Start from current drug index
+                endIndex: drugIndex,   // Will be updated as we add drugs
                 drugs: []
             };
-        } else if (genericName && genericName.trim() !== '' && currentSection) {
-            // This is a drug row, add to current section
-            currentSection.drugs.push({
-                ...row,
-                globalIndex: drugIndex
-            });
-            currentSection.endIndex = drugIndex + 1;
-            drugIndex++;
+        } else if (genericName && genericName.trim() !== '' && !genericName.startsWith('#')) {
+            // This is a drug row
+            if (currentSection) {
+                // Add to current section
+                currentSection.drugs.push({
+                    ...row,
+                    globalIndex: drugIndex
+                });
+                currentSection.endIndex = drugIndex + 1; // Update end index
+            } else {
+                // No current section - create a default one for orphaned drugs
+                currentSection = {
+                    name: 'Other Medications',
+                    startIndex: drugIndex,
+                    endIndex: drugIndex + 1,
+                    drugs: [{
+                        ...row,
+                        globalIndex: drugIndex
+                    }]
+                };
+            }
+            drugIndex++; // Only increment for actual drug rows
         }
     });
     
@@ -683,6 +697,7 @@ function parseDrugSectionsFromData(csvData) {
         sections.push(currentSection);
     }
     
+    console.log('Parsed sections:', sections); // For debugging
     return sections;
 }
 
